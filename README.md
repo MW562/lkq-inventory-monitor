@@ -170,11 +170,13 @@ journalctl -u lkq-alert.service -f
 
 ---
 
-## Raspberry Pi Deployment
+## Linux Automation
 
-This application is designed to run continuously on a Raspberry Pi.
+This project includes example `systemd` service and timer files located in the `systemd/` directory.
 
-A systemd timer automatically executes the scraper every 15 minutes during configured operating hours, allowing the system to monitor inventory without user interaction.
+These files can be installed on Linux systems (such as a Raspberry Pi) to run the application automatically on a schedule. The current systemd files run the application every 15 minutes from 9am to 5pm, reflecting when the lkq lots are open.
+
+Update the file paths inside `lkq-alert.service` to match your installation directory before enabling the service.
 
 ---
 
