@@ -180,7 +180,7 @@ A systemd timer automatically executes the scraper every 15 minutes during confi
 
 ## Example Notification
 
-![Discord Notification](images/notification.png)
+![Discord Notification](images/Notification.png)
 
 ---
 
