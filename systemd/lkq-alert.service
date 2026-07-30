@@ -5,11 +5,11 @@ Wants=network-online.target
 
 [Service]
 Type=oneshot
-User=michael
-WorkingDirectory=/home/michael/LKQ-AlertScript
+User="username"
+WorkingDirectory=/home/"username"/LKQ-AlertScript
 
-#          venv python installation directory     main.py directory
-ExecStart= .../LKQ-AlertScript/.venv/bin/python   .../LKQ-AlertScript/main.py
+#          venv python installation directory                  main.py directory
+ExecStart= /home/"username"/LKQ-AlertScript/.venv/bin/python   /home/"username"/LKQ-AlertScript/main.py
 
 # Ensure print() output is immediately written to the logs
 Environment=PYTHONUNBUFFERED=1
