@@ -1,0 +1,24 @@
+[Unit]
+Description=LKQ Pick Your Part Inventory Checker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=michael
+WorkingDirectory=/home/michael/LKQ-AlertScript
+
+ExecStart=/home/michael/LKQ-AlertScript/.venv/bin/python /home/michael/LKQ-AlertScript/main.py
+
+# Ensure print() output is immediately written to the logs
+Environment=PYTHONUNBUFFERED=1
+
+# Send stdout/stderr to the system journal
+StandardOutput=journal
+StandardError=journal
+
+# Allow a reasonable amount of time before considering the service hung
+TimeoutStartSec=300
+
+[Install]
+WantedBy=multi-user.target
