@@ -8,7 +8,8 @@ Type=oneshot
 User=michael
 WorkingDirectory=/home/michael/LKQ-AlertScript
 
-ExecStart=/home/michael/LKQ-AlertScript/.venv/bin/python /home/michael/LKQ-AlertScript/main.py
+#          venv python installation directory     main.py directory
+ExecStart= .../LKQ-AlertScript/.venv/bin/python   .../LKQ-AlertScript/main.py
 
 # Ensure print() output is immediately written to the logs
 Environment=PYTHONUNBUFFERED=1
